@@ -13,6 +13,8 @@ class Transaction extends Model
     {
         return $this->belongsTo(User::class);
     }
-    
+
     use HasFactory;
+    protected $hidden = ['created_at', 'updated_at'];
+
 }
